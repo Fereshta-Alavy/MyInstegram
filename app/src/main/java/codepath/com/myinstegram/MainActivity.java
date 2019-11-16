@@ -97,16 +97,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    
+    private void goBackToLoginActivity() {
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
+    }
 
     private void goPostActivity(){
         Intent i = new Intent(this, PostActivity.class);
         startActivity(i);
         queryPosts();
-    }
-
-    private void goBackToLoginActivity() {
-        Intent i = new Intent(this, LoginActivity.class);
-        startActivity(i);
     }
 
 
