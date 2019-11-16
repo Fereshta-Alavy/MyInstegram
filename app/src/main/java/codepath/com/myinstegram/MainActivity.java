@@ -17,15 +17,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
-import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.File;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public String photoFileName = "photo.jpg";
     private File photoFile;
     public post post;
+    public String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    
+
     private void goBackToLoginActivity() {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
@@ -105,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void goPostActivity(){
         Intent i = new Intent(this, PostActivity.class);
+        i.putExtra("id", id);
         startActivity(i);
-        queryPosts();
     }
 
 
@@ -174,13 +172,12 @@ public class MainActivity extends AppCompatActivity {
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
-                String id = post.getObjectId();
+                id = post.getObjectId();
                 if(e != null){
                     Log.e(TAG, "there is error saving the item");
                     e.printStackTrace();
                     return;
                 }
-
                 Log.d(TAG, "success");
                 etDescription.setText("");
                 ivPostImage.setImageResource(0);
@@ -189,27 +186,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void queryPosts() {
-        ParseQuery<post> postQuery = new ParseQuery<post>(post.class);
-        postQuery.include(post.KEY_USER);
-        postQuery.findInBackground(new FindCallback<post>() {
-            @Override
-            public void done(List<post> posts, ParseException e) {
-
-                if(e != null){
-                    Log.e(TAG, "error with Query");
-                    e.printStackTrace();
-                    return;
-                }
-
-                String ob = post.getObjectId();
-                String des = post.getDescription();
-
-
-
-
-
-            }
-        });
-    }
 }
