@@ -5,14 +5,14 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:id="@+id/action_home"
         android:enabled="true"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="home"
+        android:title="Home"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_camera"
         android:enabled="true"
         android:icon="@drawable/ic_add_circle_outline_black_24dp"
-        android:title="Lunch camera"
+        android:title="Camera"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_profile"
@@ -25,6 +25,6 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:id="@+id/action_movie"
         android:enabled="true"
         android:icon="@drawable/ic_movie_black_24dp"
-        android:title="Logout"
+        android:title="Movie"
         app:showAsAction="always" />
 </menu>
