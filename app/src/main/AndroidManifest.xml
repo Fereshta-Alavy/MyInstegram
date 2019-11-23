@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PostActivity"></activity>
         <activity android:name=".SignUpActivity" />
 
         <provider

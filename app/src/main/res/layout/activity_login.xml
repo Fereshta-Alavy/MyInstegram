@@ -41,14 +41,14 @@
 
     <Button
         android:id="@+id/btnLogIn"
-        android:layout_width="348dp"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/password"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="286dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginEnd="2dp"
         android:background="#ADDAD6"
         android:text="Log In"
         android:textColor="#FAFBFBFB"
@@ -56,14 +56,14 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
-        android:layout_width="356dp"
-        android:layout_height="46dp"
+        android:layout_width="339dp"
+        android:layout_height="49dp"
         android:layout_alignEnd="@+id/userName"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="-2dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="-5dp"
         android:background="#ADDAD6"
         android:hint="  password"
         android:password="true"
@@ -71,19 +71,19 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/userName"
-        android:layout_width="351dp"
-        android:layout_height="43dp"
+        android:layout_width="342dp"
+        android:layout_height="46dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="138dp"
         android:background="#ADDAD6"
         android:hint="  Email or Username"
         android:textColorHint="#FFFFFF" />
 
     <Button
         android:id="@+id/btnSignUp"
-        android:layout_width="346dp"
+        android:layout_width="341dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnLogIn"
         android:layout_alignStart="@+id/btnLogIn"
